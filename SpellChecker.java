@@ -51,7 +51,7 @@ public class SpellChecker {
 
 	public static String spellChecker(String word, int threshold, String[] dictionary)
 	{
-		int value = threshold;
+		int value = threshold + 1;
 		String similerword = word;
 		for(int i=0;i<3000;i++)
 		{
