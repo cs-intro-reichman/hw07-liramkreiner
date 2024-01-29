@@ -70,8 +70,8 @@ public class HashTagTokenizer {
         	{
         		
             	System.out.println(newordl);
-            	breakHashTag(hashtag.substring(i,N),dictionary);
-            	break;
+            	breakHashTag(hashtag.substring(i,N),dictionary);//recursing without the word we found
+            	break;//exittheloop if we finf a word
 
         	}
         	  
