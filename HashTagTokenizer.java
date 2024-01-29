@@ -70,7 +70,8 @@ public class HashTagTokenizer {
         	{
         		
             	System.out.println(newordl);
-            	breakHashTag(hashtag.substring(i,N-1),dictionary);
+            	breakHashTag(hashtag.substring(i,N),dictionary);
+            	break;
 
         	}
         	  
