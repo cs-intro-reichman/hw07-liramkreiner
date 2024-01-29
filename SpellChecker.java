@@ -51,13 +51,22 @@ public class SpellChecker {
 
 	public static String spellChecker(String word, int threshold, String[] dictionary)
 	{
+		int value = threshold;
+		String similerword = word;
 		for(int i=0;i<3000;i++)
 		{
-			if(levenshtein(word,dictionary[i])==threshold)
-				return dictionary[i];
+			int valueofdictionary = levenshtein(word,dictionary[i]);
+			if(valueofdictionary<=threshold)//check all the dictionary with the word
+			{
+				if(valueofdictionary<value)
+				{
+					value=valueofdictionary;
+					similerword = dictionary[i];
+				}
+			}
 		}
 
-		return word;
+		return similerword;
 	}
 
 }
